@@ -14,6 +14,7 @@ specifiers:
   nuxt: ^2.15.7
   postcss: ^8.3.5
   prettier: ^2.3.2
+  push-dir: ^0.4.1
 
 dependencies:
   '@nuxtjs/axios': 5.13.6
@@ -31,6 +32,7 @@ devDependencies:
   eslint-plugin-vue: 7.12.1_eslint@7.29.0
   postcss: 8.3.5
   prettier: 2.3.2
+  push-dir: 0.4.1
 
 packages:
 
@@ -7656,6 +7658,14 @@ packages:
       glob: 7.1.7
       postcss: 8.3.5
       postcss-selector-parser: 6.0.6
+    dev: true
+
+  /push-dir/0.4.1:
+    resolution: {integrity: sha1-KUgerNnCEGu7eUHbbTfRIqBx7LQ=}
+    engines: {node: '>=0.12'}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.5
     dev: true
 
   /q/1.5.1:
