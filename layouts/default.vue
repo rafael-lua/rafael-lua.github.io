@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto px-3 sm:px-0">
     <PortfolioHeader />
     <Nuxt />
     <!-- <PortfolioFooter /> -->
@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import PortfolioHeader from "@/components/layout/PortfolioHeader.vue";
+import PortfolioHeader from '@/components/layout/PortfolioHeader.vue'
 
 export default {
   components: {
     PortfolioHeader,
     // PortfolioFooter
-  }
+  },
 }
 </script>
 
@@ -21,9 +21,9 @@ export default {
 /* font-family: 'Open Sans', sans-serif; */
 
 :root {
-  --dark: rgb(20, 20, 20);
-  --white: rgb(255, 255, 255);
-  --highlight: rgb(255, 181, 36);
+  --dark: 20, 20, 20;
+  --white: 255, 255, 255;
+  --highlight: 255, 181, 36;
 }
 
 * {
@@ -36,12 +36,16 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   line-height: 1.6;
-  background: var(--dark);
-  color: var(--white);
+  background: rgb(var(--dark));
+  color: rgb(var(--white));
 }
 
 a {
-  color: var(--highlight);
+  color: rgb(var(--highlight));
   text-decoration: none;
+}
+
+p {
+  margin: 10px 0;
 }
 </style>
