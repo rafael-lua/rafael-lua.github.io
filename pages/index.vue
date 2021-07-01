@@ -1,7 +1,13 @@
 <template>
-  <h1>Hello!</h1>
+  <IntroductionSection />
 </template>
 
 <script>
-export default {}
+import IntroductionSection from '@/components/sections/IntroductionSection.vue'
+
+export default {
+  components: {
+    IntroductionSection,
+  },
+}
 </script>
