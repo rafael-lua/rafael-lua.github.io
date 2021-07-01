@@ -43,6 +43,12 @@ body {
 a {
   color: rgb(var(--highlight));
   text-decoration: none;
+  opacity: 0.75;
+}
+
+a:hover {
+  border-bottom: 1px solid rgb(var(--highlight));
+  opacity: 1;
 }
 
 p {
