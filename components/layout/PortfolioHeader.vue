@@ -1,11 +1,30 @@
 <template>
   <div class="mb-5 pt-3 flex justify-between">
-    <div>Portfolio</div>
+    <div>
+      <a
+        target="_blank"
+        href="https://github.com/rafael-lua/rafael-lua.github.io/tree/develop"
+        >Portfolio</a
+      >
+    </div>
     <nav class="flex">
-      <div class="w-36 text-lg text-center" :class="isSelected('en')">
+      <!-- keyup and tabindex is added for supporting keyboard navigation -->
+      <div
+        tabindex="0"
+        class="w-28 mx-4 text-lg text-center cursor-pointer"
+        :class="isSelected('en')"
+        @click="selectLang('en')"
+        @keyup.enter="selectLang('en')"
+      >
         ENGLISH
       </div>
-      <div class="w-36 text-lg text-center" :class="isSelected('pt')">
+      <div
+        tabindex="0"
+        class="w-28 mx-4 text-lg text-center cursor-pointer"
+        :class="isSelected('pt')"
+        @click="selectLang('pt')"
+        @keyup.enter="selectLang('pt')"
+      >
         PORTUGUÊS
       </div>
     </nav>
@@ -25,6 +44,10 @@ export default {
   methods: {
     isSelected(lang) {
       return lang === this.language ? 'font-bold lang' : 'font-normal'
+    },
+
+    selectLang(lang) {
+      this.language = lang
     },
   },
 }
