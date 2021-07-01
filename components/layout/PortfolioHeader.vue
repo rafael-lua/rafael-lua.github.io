@@ -11,7 +11,14 @@
       <!-- keyup and tabindex is added for supporting keyboard navigation -->
       <div
         tabindex="0"
-        class="w-28 mx-4 text-lg text-center cursor-pointer"
+        class="
+          w-28
+          mx-4
+          text-lg text-center
+          cursor-pointer
+          transform
+          hover:scale-105
+        "
         :class="isSelected('en')"
         @click="selectLang('en')"
         @keyup.enter="selectLang('en')"
@@ -20,7 +27,14 @@
       </div>
       <div
         tabindex="0"
-        class="w-28 mx-4 text-lg text-center cursor-pointer"
+        class="
+          w-28
+          mx-4
+          text-lg text-center
+          cursor-pointer
+          transform
+          hover:scale-105
+        "
         :class="isSelected('pt')"
         @click="selectLang('pt')"
         @keyup.enter="selectLang('pt')"
