@@ -60,115 +60,117 @@
     </div>
 
     <div class="flex items-start justify-center mx-5">
-      <div class="flex flex-col border-4 rounded-xl p-2">
+      <div class="flex flex-col border-2 rounded-xl p-2">
         <div class="flex items-center">
           <Icon icon="mdi:tools" width="24" height="24" class="mr-3" />
           <span class="text-lg font-semibold">My main skills</span>
         </div>
 
-        <!-- top row of icons -->
-        <div class="flex mx-10">
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-html"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">HTML</span>
+        <div class="flex flex-col items-start frame-width">
+          <!-- top row of icons -->
+          <div class="flex mx-auto gap-x-10">
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-html"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">HTML</span>
+            </div>
+
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-css"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">CSS</span>
+            </div>
+
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-js-official"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">JavaScript</span>
+            </div>
+
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-node"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">Express</span>
+            </div>
+
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-reactjs"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">React</span>
+            </div>
           </div>
 
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-css"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">CSS</span>
-          </div>
+          <!-- bottom row of icons -->
+          <div class="flex mx-auto gap-x-10">
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:folder-type-light-redux"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">Redux</span>
+            </div>
 
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-js-official"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">JavaScript</span>
-          </div>
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-vue"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">Vue</span>
+            </div>
 
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-node"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">Express</span>
-          </div>
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-nuxt"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">Nuxt</span>
+            </div>
 
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-reactjs"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">React</span>
-          </div>
-        </div>
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-git"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">Git</span>
+            </div>
 
-        <!-- bottom row of icons -->
-        <div class="flex mx-10">
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:folder-type-light-redux"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">Redux</span>
-          </div>
-
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-vue"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">Vue</span>
-          </div>
-
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-nuxt"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">Nuxt</span>
-          </div>
-
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-git"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">Git</span>
-          </div>
-
-          <div class="m-5 flex flex-col items-center">
-            <Icon
-              icon="vscode-icons:file-type-rest"
-              width="48"
-              height="48"
-              class="mb-1"
-            />
-            <span class="font-bold">RESTful API</span>
+            <div class="my-5 flex flex-col items-center">
+              <Icon
+                icon="vscode-icons:file-type-rest"
+                width="48"
+                height="48"
+                class="mb-1"
+              />
+              <span class="font-bold">RESTful API</span>
+            </div>
           </div>
         </div>
       </div>
@@ -196,5 +198,9 @@ export default {
 
 .width-limit {
   max-width: 400px;
+}
+
+.frame-width {
+  width: 600px;
 }
 </style>
