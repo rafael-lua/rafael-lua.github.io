@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-evenly">
-    <div class="flex items-center">
+  <div class="flex justify-evenly my-16">
+    <div class="flex items-center mx-5">
       <div class="v-line bg-yellow-400 mx-5"></div>
       <div class="flex-col mx-5">
         <div class="tracking-wide my-10 text-5xl font-bold">hi there :)</div>
@@ -58,7 +58,121 @@
         </div>
       </div>
     </div>
-    <div>skills</div>
+
+    <div class="flex items-start justify-center mx-5">
+      <div class="flex flex-col border-4 rounded-xl p-2">
+        <div class="flex items-center">
+          <Icon icon="mdi:tools" width="24" height="24" class="mr-3" />
+          <span class="text-lg font-semibold">My main skills</span>
+        </div>
+
+        <!-- top row of icons -->
+        <div class="flex mx-10">
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-html"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">HTML</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-css"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">CSS</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-js-official"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">JavaScript</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-node"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">Express</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-reactjs"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">React</span>
+          </div>
+        </div>
+
+        <!-- bottom row of icons -->
+        <div class="flex mx-10">
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:folder-type-light-redux"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">Redux</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-vue"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">Vue</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-nuxt"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">Nuxt</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-git"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">Git</span>
+          </div>
+
+          <div class="m-5 flex flex-col items-center">
+            <Icon
+              icon="vscode-icons:file-type-rest"
+              width="48"
+              height="48"
+              class="mb-1"
+            />
+            <span class="font-bold">RESTful API</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
