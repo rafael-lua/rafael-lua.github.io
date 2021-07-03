@@ -4,7 +4,7 @@
       <a
         target="_blank"
         href="https://github.com/rafael-lua/rafael-lua.github.io/tree/develop"
-        >Portfolio</a
+        >Repository</a
       >
     </div>
     <nav class="flex">
