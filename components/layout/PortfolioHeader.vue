@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-5 pt-3 flex justify-between">
+  <header class="mb-5 pt-3 flex justify-between">
     <div>
       <a
         target="_blank"
@@ -42,7 +42,7 @@
         PORTUGUÊS
       </div>
     </nav>
-  </div>
+  </header>
 </template>
 
 <script>
