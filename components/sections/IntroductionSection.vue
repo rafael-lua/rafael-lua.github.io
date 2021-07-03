@@ -196,10 +196,12 @@ export default {
   height: 250px;
 }
 
+/* matching the width of figma for the left side text */
 .width-limit {
   max-width: 400px;
 }
 
+/* matching the width of figma for the right frame with the skills */
 .frame-width {
   width: 600px;
 }

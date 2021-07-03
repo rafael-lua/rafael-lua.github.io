@@ -49,6 +49,11 @@ a {
   opacity: 0.75;
 }
 
+a.dark {
+  color: rgb(var(--dark));
+  opacity: 0.95;
+}
+
 a:hover {
   border-bottom: 1px solid rgb(var(--highlight));
   opacity: 1;
