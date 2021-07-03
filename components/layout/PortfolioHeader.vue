@@ -1,5 +1,5 @@
 <template>
-  <header class="mb-5 pt-3 flex justify-between">
+  <header class="mb-5 pt-3 flex justify-between px-3 sm:px-10">
     <div>
       <a
         target="_blank"

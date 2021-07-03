@@ -1,7 +1,9 @@
 <template>
-  <div class="container mx-auto px-3 sm:px-0">
+  <div>
     <PortfolioHeader />
-    <Nuxt />
+    <div class="container mx-auto">
+      <Nuxt />
+    </div>
     <PortfolioFooter />
   </div>
 </template>
