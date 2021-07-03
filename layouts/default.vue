@@ -62,4 +62,8 @@ a:hover {
 p {
   margin: 10px 0;
 }
+
+ul {
+  list-style-type: none;
+}
 </style>
