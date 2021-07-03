@@ -2,17 +2,18 @@
   <div class="container mx-auto px-3 sm:px-0">
     <PortfolioHeader />
     <Nuxt />
-    <!-- <PortfolioFooter /> -->
+    <PortfolioFooter />
   </div>
 </template>
 
 <script>
 import PortfolioHeader from '@/components/layout/PortfolioHeader.vue'
+import PortfolioFooter from '@/components/layout/PortfolioFooter.vue'
 
 export default {
   components: {
     PortfolioHeader,
-    // PortfolioFooter
+    PortfolioFooter,
   },
 }
 </script>
