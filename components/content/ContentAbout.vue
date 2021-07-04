@@ -21,7 +21,7 @@
       </span>
     </div>
     <div class="flex">
-      <div class="v-line bg-yellow-400 mx-5"></div>
+      <div class="v-line bg-yellow-400 mr-5"></div>
       <div class="flex flex-col">
         <div class="h-div text-xl flex items-center">
           <Icon icon="mdi:at" width="24" height="24" class="mr-1" />
