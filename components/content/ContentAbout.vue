@@ -1,6 +1,17 @@
 <template>
   <div class="flex items-center justify-center gap-x-10">
-    <div class="flex flex-col gap-y-5 max-width break-words">
+    <div
+      class="
+        flex flex-col
+        gap-y-5
+        max-width
+        break-words
+        bg-black bg-opacity-25
+        p-3
+        rounded-xl
+        shadow-md
+      "
+    >
       <span> My name is Rafael de Oliveira Tragueta, I am from Brazil. </span>
       <span>
         I have always been interested in coding. I gave my first steps with game
