@@ -4,7 +4,7 @@
       <a
         target="_blank"
         href="https://github.com/rafael-lua/rafael-lua.github.io/tree/develop"
-        >Repository</a
+        >{{ $t('gitRepository') }}</a
       >
     </div>
     <nav class="flex">
@@ -20,8 +20,8 @@
           hover:scale-105
         "
         :class="isSelected('en')"
-        @click="selectLang('en')"
-        @keyup.enter="selectLang('en')"
+        @click="changeLanguage('en')"
+        @keyup.enter="changeLanguage('en')"
       >
         ENGLISH
       </div>
@@ -36,8 +36,8 @@
           hover:scale-105
         "
         :class="isSelected('pt')"
-        @click="selectLang('pt')"
-        @keyup.enter="selectLang('pt')"
+        @click="changeLanguage('pt')"
+        @keyup.enter="changeLanguage('pt')"
       >
         PORTUGUÊS
       </div>
@@ -60,7 +60,8 @@ export default {
       return lang === this.language ? 'font-bold lang' : 'font-normal'
     },
 
-    selectLang(lang) {
+    changeLanguage(lang) {
+      this.$router.push({ path: this.switchLocalePath(lang) })
       this.language = lang
     },
   },
