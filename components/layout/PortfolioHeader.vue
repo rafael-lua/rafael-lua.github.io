@@ -55,6 +55,10 @@ export default {
     }
   },
 
+  mounted() {
+    this.$router.push({ path: this.switchLocalePath(this.language) })
+  },
+
   methods: {
     isSelected(lang) {
       return lang === this.language ? 'font-bold lang' : 'font-normal'
