@@ -1,3 +1,6 @@
+import LOCALE_EN from './locales/en'
+import LOCALE_PT from './locales/pt'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -61,12 +64,8 @@ export default {
         vueI18n: {
           fallbackLocale: 'en',
           messages: {
-            en: {
-              gitRepository: 'Repository',
-            },
-            pt: {
-              gitRepository: 'Repositório',
-            },
+            ...LOCALE_EN,
+            ...LOCALE_PT,
           },
         },
       },
