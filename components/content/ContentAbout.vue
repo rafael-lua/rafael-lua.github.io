@@ -35,7 +35,12 @@
       <div class="v-line bg-yellow-400 mr-5"></div>
       <div class="flex flex-col">
         <div class="h-div text-xl flex items-center">
-          <Icon icon="mdi:at" width="24" height="24" class="mr-1" />
+          <span
+            class="iconify mr-1"
+            data-icon="mdi:at"
+            data-width="24"
+            data-height="24"
+          />
           <span>RELEVANT MILESTONES</span>
         </div>
 
@@ -90,14 +95,8 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue2'
-
 export default {
   name: 'ContentAbout',
-
-  components: {
-    Icon,
-  },
 }
 </script>
 

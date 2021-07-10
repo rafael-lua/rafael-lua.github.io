@@ -1,5 +1,6 @@
 export default {
-  pt: {
-    gitRepository: 'Repositório',
+  gitRepository: 'Repositório',
+  introduction: {
+    greeting: 'opa, e aê :)',
   },
 }

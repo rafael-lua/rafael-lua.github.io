@@ -12,14 +12,14 @@
     "deploy": "pnpm run generate && cp ./README.md ./dist && push-dir --dir=dist --branch=main --cleanup"
   },
   "dependencies": {
+    "@iconify/iconify": "^2.0.3",
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7",
-    "nuxt-i18n": "^6.27.2"
+    "lodash": "^4.17.21",
+    "nuxt": "^2.15.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
-    "@iconify/vue2": "^1.0.0-beta.1",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.0",

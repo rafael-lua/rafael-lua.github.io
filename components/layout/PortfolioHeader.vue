@@ -4,7 +4,7 @@
       <a
         target="_blank"
         href="https://github.com/rafael-lua/rafael-lua.github.io/tree/develop"
-        >{{ $t('gitRepository') }}</a
+        >{{ getText('gitRepository') }}</a
       >
     </div>
     <nav class="flex">
@@ -46,17 +46,19 @@
 </template>
 
 <script>
+import { mapMutations, mapState, mapGetters } from 'vuex'
+
 export default {
   name: 'PortfolioHeader',
 
-  data() {
-    return {
-      language: 'en',
-    }
-  },
+  computed: {
+    ...mapState({
+      language: (state) => state.language,
+    }),
 
-  mounted() {
-    this.$router.push({ path: this.switchLocalePath(this.language) })
+    ...mapGetters({
+      getText: 'getText',
+    }),
   },
 
   methods: {
@@ -65,9 +67,12 @@ export default {
     },
 
     changeLanguage(lang) {
-      this.$router.push({ path: this.switchLocalePath(lang) })
-      this.language = lang
+      this.setLanguage(lang)
     },
+
+    ...mapMutations({
+      setLanguage: 'setLanguage',
+    }),
   },
 }
 </script>

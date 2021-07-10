@@ -7,11 +7,11 @@
       <div class="p-3 flex flex-col items-center">
         <div class="flex flex-col items-center gap-y-1">
           <div class="flex items-center">
-            <Icon
-              icon="fa-solid:graduation-cap"
-              width="16"
-              height="16"
-              class="mr-1"
+            <span
+              class="iconify mr-1"
+              data-icon="fa-solid:graduation-cap"
+              data-width="16"
+              data-height="16"
             />
             <span class="text-sm">I know</span>
           </div>
@@ -92,14 +92,8 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue2'
-
 export default {
   name: 'ContentSkills',
-
-  components: {
-    Icon,
-  },
 }
 </script>
 

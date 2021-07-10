@@ -1,5 +1,6 @@
 export default {
-  en: {
-    gitRepository: 'Repository',
+  gitRepository: 'Repository',
+  introduction: {
+    greeting: 'hi there :)',
   },
 }

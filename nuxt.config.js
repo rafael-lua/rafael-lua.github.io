@@ -1,6 +1,3 @@
-import LOCALE_EN from './locales/en'
-import LOCALE_PT from './locales/pt'
-
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -39,7 +36,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['@/node_modules/@iconify/iconify/dist/iconify.min.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -56,20 +53,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    [
-      'nuxt-i18n',
-      {
-        locales: ['en', 'pt'],
-        defaultLocale: 'en',
-        vueI18n: {
-          fallbackLocale: 'en',
-          messages: {
-            ...LOCALE_EN,
-            ...LOCALE_PT,
-          },
-        },
-      },
-    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

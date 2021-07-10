@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@babel/eslint-parser': ^7.14.7
-  '@iconify/vue2': ^1.0.0-beta.1
+  '@iconify/iconify': ^2.0.3
   '@nuxtjs/axios': ^5.13.6
   '@nuxtjs/eslint-config': ^6.0.1
   '@nuxtjs/eslint-module': ^3.0.2
@@ -12,21 +12,21 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-plugin-nuxt: ^2.0.0
   eslint-plugin-vue: ^7.12.1
+  lodash: ^4.17.21
   nuxt: ^2.15.7
-  nuxt-i18n: ^6.27.2
   postcss: ^8.3.5
   prettier: ^2.3.2
   push-dir: ^0.4.1
 
 dependencies:
+  '@iconify/iconify': 2.0.3
   '@nuxtjs/axios': 5.13.6
   core-js: 3.15.2
+  lodash: 4.17.21
   nuxt: 2.15.7
-  nuxt-i18n: 6.27.2
 
 devDependencies:
   '@babel/eslint-parser': 7.14.7_eslint@7.29.0
-  '@iconify/vue2': 1.0.0-beta.1
   '@nuxtjs/eslint-config': 6.0.1_eslint@7.29.0
   '@nuxtjs/eslint-module': 3.0.2_eslint@7.29.0
   '@nuxtjs/tailwindcss': 4.2.0
@@ -1234,31 +1234,10 @@ packages:
       purgecss: 4.0.3
     dev: true
 
-  /@iconify/vue2/1.0.0-beta.1:
-    resolution: {integrity: sha512-R1R8OCM1cvfV38WAr1vAaN7kiFgHRGcpCmPoln2P0tibmrpwSLoGW5rk3nQcQBqYZD/XSEN2dQBHQzTmkyuf+g==}
-    peerDependencies:
-      vue: 2.x
-    dev: true
-
-  /@intlify/shared/9.1.6:
-    resolution: {integrity: sha512-6MtsKulyfZxdD7OuxjaODjj8QWoHCnLFAk4wkWiHqBCa6UCTC0qXjtEeZ1MxpQihvFmmJZauBUu25EvtngW5qQ==}
-    engines: {node: '>= 10'}
-    dev: false
-
-  /@intlify/vue-i18n-extensions/1.0.2:
-    resolution: {integrity: sha512-rnfA0ScyBXyp9xsSD4EAMGeOh1yv/AE7fhqdAdSOr5X8N39azz257umfRtzNT9sHXAKSSzpCVhIbMAkp5c/gjQ==}
-    engines: {node: '>= 10.0'}
+  /@iconify/iconify/2.0.3:
+    resolution: {integrity: sha512-Ctjre38vIf0PjjU2joj+DheSDFajdLiZ7gNdttjsXPqB9yYrmqOIDe1ce8L8v0qO86kM05hF9lUMriQTlgiSPA==}
     dependencies:
-      '@babel/parser': 7.14.7
-    dev: false
-
-  /@intlify/vue-i18n-loader/1.1.0:
-    resolution: {integrity: sha512-9LXiztMtYKTE8t/hRwwGUp+ofrwU0sxLQLzFEOZ38zvn0DonUIQmZUj1cfz5p1Lu8BllxKbCrn6HnsRJ+LYA6g==}
-    engines: {node: '>= 10'}
-    dependencies:
-      '@intlify/shared': 9.1.6
-      js-yaml: 3.14.1
-      json5: 2.2.0
+      cross-fetch: 3.1.4
     dev: false
 
   /@koa/router/9.4.0:
@@ -3162,11 +3141,6 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /cookie/0.4.1:
-    resolution: {integrity: sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==}
-    engines: {node: '>= 0.6'}
-    dev: false
-
   /cookies/0.8.0:
     resolution: {integrity: sha512-8aPsApQfebXnuI+537McwYsDtjVxGm8gTIzQI3FDW6t5t/DAhERxtnbEPN/8RX+uZthoz4eCOgloXaE5cYyNow==}
     engines: {node: '>= 0.8'}
@@ -3270,6 +3244,12 @@ packages:
 
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
+    dev: false
+
+  /cross-fetch/3.1.4:
+    resolution: {integrity: sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==}
+    dependencies:
+      node-fetch: 2.6.1
     dev: false
 
   /cross-spawn/7.0.3:
@@ -5351,10 +5331,6 @@ packages:
     dependencies:
       is-extglob: 2.1.1
 
-  /is-https/4.0.0:
-    resolution: {integrity: sha512-FeMLiqf8E5g6SdiVJsPcNZX8k4h2fBs1wp5Bb6uaNxn58ufK1axBqQZdmAQsqh0t9BuwFObybrdVJh6MKyPlyg==}
-    dev: false
-
   /is-negative-zero/2.0.1:
     resolution: {integrity: sha512-2z6JzQvZRa9A2Y7xC6dQQm4FSTSTNWjKIYYTt4246eMTJmIo0Q+ZyOsU66X8lxK1AbB92dFeglPLrhwpeRKO6w==}
     engines: {node: '>= 0.4'}
@@ -5487,10 +5463,6 @@ packages:
     hasBin: true
     dev: false
 
-  /js-cookie/2.2.1:
-    resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
-    dev: false
-
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -5589,6 +5561,7 @@ packages:
   /klona/2.0.4:
     resolution: {integrity: sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==}
     engines: {node: '>= 8'}
+    dev: true
 
   /koa-compose/3.2.1:
     resolution: {integrity: sha1-qFzLQLfZhtjlo0Wzoazo6rz1Tec=}
@@ -5776,6 +5749,7 @@ packages:
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: true
 
   /lodash.template/4.5.0:
     resolution: {integrity: sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==}
@@ -6326,25 +6300,6 @@ packages:
 
   /num2fraction/1.2.2:
     resolution: {integrity: sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=}
-    dev: false
-
-  /nuxt-i18n/6.27.2:
-    resolution: {integrity: sha512-9L2Wfokm2iLWJi5coh9xzGvy9ipX2Fb/5hyIY0pnim87MpL6M5bxIkuEo34NkU0IvxeMkfEqYjxQh0E9Do8S9A==}
-    dependencies:
-      '@babel/parser': 7.14.7
-      '@babel/traverse': 7.14.7
-      '@intlify/vue-i18n-extensions': 1.0.2
-      '@intlify/vue-i18n-loader': 1.1.0
-      cookie: 0.4.1
-      devalue: 2.0.1
-      is-https: 4.0.0
-      js-cookie: 2.2.1
-      klona: 2.0.4
-      lodash.merge: 4.6.2
-      ufo: 0.7.7
-      vue-i18n: 8.24.5
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /nuxt/2.15.7:
@@ -9307,10 +9262,6 @@ packages:
 
   /vue-hot-reload-api/2.3.4:
     resolution: {integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==}
-    dev: false
-
-  /vue-i18n/8.24.5:
-    resolution: {integrity: sha512-p8W5xOmniuZ8fj76VXe0vBL3bRWVU87jHuC/v8VwmhKVH2iMQsKnheB1U+umxDBqC/5g9K+NwzokepcLxnBAVQ==}
     dev: false
 
   /vue-loader/15.9.7_559ffc97fd41de05d12663d7fb949156:
