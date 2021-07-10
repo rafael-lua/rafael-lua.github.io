@@ -17,54 +17,27 @@
             break-words
           "
         >
-          I’m <strong>Rafael</strong> and I’m a full stack developer
+          <span v-html="getText('introduction.whoami')"></span>
         </div>
 
+        <!-- socials list  -->
         <div class="flex-col my-10">
-          <div class="my-4 flex items-center">
+          <div
+            v-for="social in socials"
+            :key="social.name"
+            class="my-4 flex items-center"
+          >
             <span
               class="iconify mr-3"
-              data-icon="fa-brands:github"
+              :data-icon="social.icon"
               data-width="32"
               data-height="32"
             />
-            <span
-              ><strong
-                >Github:
-                <a href="https://github.com/rafael-lua" target="_blank"
-                  >github.com/rafael-lua</a
-                ></strong
-              ></span
-            >
-          </div>
-          <div class="my-4 flex items-center">
-            <span
-              class="iconify mr-3"
-              data-icon="fa-brands:linkedin"
-              data-width="32"
-              data-height="32"
-            />
-            <span
-              >Linkedin:
-              <a
-                href="https://www.linkedin.com/in/rafael-tragueta-446361174"
-                target="_blank"
-                >www.linkedin.com/in/rafael-tragueta-446361174</a
-              ></span
-            >
-          </div>
-          <div class="my-4 flex items-center">
-            <span
-              class="iconify mr-3"
-              data-icon="mdi:at"
-              data-width="32"
-              data-height="32"
-            />
-            <span
-              >Email:
-              <a href="mailto:rafael.tragueta79@gmail.com"
-                >rafael.tragueta79@gmail.com</a
-              >
+            <span>
+              {{ social.name }}:
+              <a :href="social.link" target="_blank">{{
+                social.placeholder
+              }}</a>
             </span>
           </div>
         </div>
@@ -80,113 +53,43 @@
             data-width="24"
             data-height="24"
           />
-          <span class="text-lg font-semibold">My main skills</span>
+          <span class="text-lg font-semibold">{{
+            getText('introduction.skillsTitle')
+          }}</span>
         </div>
 
         <div class="flex flex-col items-start frame-width">
           <!-- top row of icons -->
           <div class="flex mx-auto gap-x-10">
-            <div class="my-5 flex flex-col items-center">
+            <div
+              v-for="skill in mainSkillsTop"
+              :key="skill.name"
+              class="my-5 flex flex-col items-center"
+            >
               <span
                 class="iconify mb-1"
-                data-icon="vscode-icons:file-type-html"
+                :data-icon="skill.icon"
                 data-width="48"
                 data-height="48"
               />
-              <span class="font-bold">HTML</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-css"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">CSS</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-js-official"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">JavaScript</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-node"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">Express</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-reactjs"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">React</span>
+              <span class="font-bold">{{ skill.name }}</span>
             </div>
           </div>
 
           <!-- bottom row of icons -->
           <div class="flex mx-auto gap-x-10">
-            <div class="my-5 flex flex-col items-center">
+            <div
+              v-for="skill in mainSkillsBottom"
+              :key="skill.name"
+              class="my-5 flex flex-col items-center"
+            >
               <span
                 class="iconify mb-1"
-                data-icon="vscode-icons:folder-type-light-redux"
+                :data-icon="skill.icon"
                 data-width="48"
                 data-height="48"
               />
-              <span class="font-bold">Redux</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-vue"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">Vue</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-nuxt"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">Nuxt</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-git"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">Git</span>
-            </div>
-
-            <div class="my-5 flex flex-col items-center">
-              <span
-                class="iconify mb-1"
-                data-icon="vscode-icons:file-type-rest"
-                data-width="48"
-                data-height="48"
-              />
-              <span class="font-bold">RESTful API</span>
+              <span class="font-bold">{{ skill.name }}</span>
             </div>
           </div>
         </div>
@@ -200,6 +103,45 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'IntroductionSection',
+
+  data() {
+    return {
+      socials: [
+        {
+          name: 'Github',
+          icon: 'fa-brands:github',
+          link: 'https://github.com/rafael-lua',
+          placeholder: 'github.com/rafael-lua',
+        },
+        {
+          name: 'Linkedin',
+          icon: 'fa-brands:linkedin',
+          link: 'https://www.linkedin.com/in/rafael-tragueta-446361174',
+          placeholder: 'www.linkedin.com/in/rafael-tragueta-446361174',
+        },
+        {
+          name: 'E-mail',
+          icon: 'mdi:at',
+          link: 'mailto:rafael.tragueta79@gmail.com',
+          placeholder: 'rafael.tragueta79@gmail.com',
+        },
+      ],
+      mainSkillsTop: [
+        { name: 'HTML', icon: 'vscode-icons:file-type-html' },
+        { name: 'CSS', icon: 'vscode-icons:file-type-css' },
+        { name: 'JavaScript', icon: 'vscode-icons:file-type-js-official' },
+        { name: 'Express', icon: 'vscode-icons:file-type-node' },
+        { name: 'React', icon: 'vscode-icons:file-type-reactjs' },
+      ],
+      mainSkillsBottom: [
+        { name: 'Redux', icon: 'vscode-icons:folder-type-light-redux' },
+        { name: 'Vue', icon: 'vscode-icons:file-type-vue' },
+        { name: 'Nuxt', icon: 'vscode-icons:file-type-nuxt' },
+        { name: 'Git', icon: 'vscode-icons:file-type-git' },
+        { name: 'RESTful API', icon: 'vscode-icons:file-type-rest' },
+      ],
+    }
+  },
 
   computed: {
     ...mapGetters({
