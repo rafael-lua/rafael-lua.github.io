@@ -45,5 +45,13 @@ export default {
         ],
       },
     },
+    skills: {
+      hard: {
+        know: 'I know',
+        familiar: "I'm very familiar with",
+        learn: "I'm learning",
+        used: 'I used it in the past',
+      },
+    },
   },
 }

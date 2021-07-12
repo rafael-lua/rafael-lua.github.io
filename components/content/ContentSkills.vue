@@ -4,88 +4,133 @@
       <div class="uppercase font-bold text-xl h-div-hard text-right">
         hard skills
       </div>
-      <div class="p-3 flex flex-col items-center">
+      <div class="p-3 flex flex-col items-center gap-y-5">
+        <!-- "i know" list group of items -->
         <div class="flex flex-col items-center gap-y-1">
           <div class="flex items-center">
             <span
-              class="iconify mr-1"
+              class="iconify mr-2"
               data-icon="fa-solid:graduation-cap"
               data-width="16"
               data-height="16"
             />
-            <span class="text-sm">I know</span>
+            <span class="text-sm">{{ skillsText.hard.know }}</span>
           </div>
 
           <div class="flex gap-x-10 p-3 border-2 rounded-xl border-yellow-400">
-            <div class="flex flex-col">
-              <div class="flex items-center gap-x-2">
+            <div
+              v-for="(knowItem, index) in know"
+              :key="index"
+              class="flex flex-col"
+            >
+              <div
+                v-for="(skill, skillIndex) in knowItem"
+                :key="skillIndex"
+                class="flex items-center gap-x-2"
+              >
                 <span>&#8226;</span>
-                <span class="font-bold">HTML5</span>
-              </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">CSS3</span>
-              </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">JavaScript (ES6)</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col">
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">React (with hooks)</span>
-              </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">Redux (+ Thunk)</span>
-              </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">Node/Express</span>
+                <span class="font-semibold">{{ skill }}</span>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="flex flex-col">
-              <div class="flex items-center gap-x-2">
+        <!-- "i'm familiar with" list group of items -->
+        <div class="flex flex-col items-center gap-y-1">
+          <div class="flex items-center">
+            <span
+              class="iconify mr-2"
+              data-icon="fa-solid:book"
+              data-width="16"
+              data-height="16"
+            />
+            <span class="text-sm">{{ skillsText.hard.familiar }}</span>
+          </div>
+
+          <div class="flex gap-x-10 p-3 border-2 rounded-xl border-yellow-400">
+            <div
+              v-for="(familiarItem, index) in familiar"
+              :key="index"
+              class="flex flex-col"
+            >
+              <div
+                v-for="(skill, skillIndex) in familiarItem"
+                :key="skillIndex"
+                class="flex items-center gap-x-2"
+              >
                 <span>&#8226;</span>
-                <span class="font-bold">Vue</span>
-              </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">Vuex</span>
-              </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">Nuxt.js</span>
+                <span class="font-semibold">{{ skill }}</span>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="flex flex-col">
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">Git/Github</span>
+        <div class="flex justify-space-between gap-x-10">
+          <!-- "i'm learning" list group of items -->
+          <div class="flex flex-col items-center gap-y-1">
+            <div class="flex items-center">
+              <span
+                class="iconify mr-2"
+                data-icon="fa-solid:search-plus"
+                data-width="16"
+                data-height="16"
+              />
+              <span class="text-sm">{{ skillsText.hard.learn }}</span>
+            </div>
+
+            <div
+              class="flex gap-x-10 p-3 border-2 rounded-xl border-yellow-400"
+            >
+              <div class="flex flex-col">
+                <div
+                  v-for="(skill, skillIndex) in learn"
+                  :key="skillIndex"
+                  class="flex items-center gap-x-2"
+                >
+                  <span>&#8226;</span>
+                  <span class="font-semibold">{{ skill }}</span>
+                </div>
               </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">RESTful API</span>
-              </div>
-              <div class="flex items-center gap-x-2">
-                <span>&#8226;</span>
-                <span class="font-bold">Scrum/Kanban</span>
+            </div>
+          </div>
+
+          <!-- "i used" list group of items -->
+          <div class="flex flex-col items-center gap-y-1">
+            <div class="flex items-center">
+              <span
+                class="iconify mr-2"
+                data-icon="fa-solid:book-open"
+                data-width="16"
+                data-height="16"
+              />
+              <span class="text-sm">{{ skillsText.hard.used }}</span>
+            </div>
+
+            <div
+              class="flex gap-x-10 p-3 border-2 rounded-xl border-yellow-400"
+            >
+              <div class="flex flex-col">
+                <div
+                  v-for="(skill, skillIndex) in used"
+                  :key="skillIndex"
+                  class="flex items-center gap-x-2"
+                >
+                  <span>&#8226;</span>
+                  <span class="font-semibold">{{ skill }}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="v-line bg-yellow-400"></div>
+
     <div class="flex flex-col">
       <div class="uppercase font-bold text-xl h-div-soft">soft skills</div>
       <div class="p-3">
-        content content content content content content content content content
-        content
+        in construction
       </div>
     </div>
   </div>
@@ -94,6 +139,32 @@
 <script>
 export default {
   name: 'ContentSkills',
+
+  props: {
+    skillsText: {
+      type: Object,
+      default: () => {},
+    },
+  },
+
+  data() {
+    return {
+      know: [
+        ['HTML5', 'CSS3', 'JavaScript (ES6)'],
+        ['React (Hooks)', 'Redux (+ Thunk)', 'Node/Express'],
+        ['Vue', 'Vuex', 'Nuxt.js'],
+        ['Git/Github', 'RESTful API', 'TailwindCSS'],
+      ],
+      familiar: [
+        ['Docker', 'CI/CD', 'Github Actions'],
+        ['SQL', 'MongoDB'],
+        ['Jest/Cypress', 'Next.js', 'Scrum/Kanban'],
+        ['C4 Model', 'Figma'],
+      ],
+      learn: ['C#', 'ASP.NET Core', 'MVC', 'PostgreSQL'],
+      used: ['PHP', 'CodeIgniter', 'Bulma'],
+    }
+  },
 }
 </script>
 

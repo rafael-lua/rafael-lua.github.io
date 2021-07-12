@@ -34,7 +34,10 @@
         :history="getHistory"
         :milestones-text="getMilestonesText"
       />
-      <ContentSkills v-show="selected === 'skills'" />
+      <ContentSkills
+        v-show="selected === 'skills'"
+        :skills-text="getSkillsText"
+      />
       <ContentProjects v-show="selected === 'projects'" />
     </div>
   </div>
@@ -70,6 +73,10 @@ export default {
 
     getMilestonesText() {
       return this.getText('content.about.milestones')
+    },
+
+    getSkillsText() {
+      return this.getText('content.skills')
     },
 
     ...mapGetters({
