@@ -7,7 +7,7 @@
         :class="isSelected('about')"
         @click="selectMenu('about')"
       >
-        about me
+        {{ getText('content.menu.about') }}
       </div>
       <div
         tabindex="0"
@@ -16,7 +16,7 @@
         @click="selectMenu('skills')"
         @keyup.enter="selectMenu('skills')"
       >
-        my skills
+        {{ getText('content.menu.skills') }}
       </div>
       <div
         tabindex="0"
@@ -25,11 +25,15 @@
         @click="selectMenu('projects')"
         @keyup.enter="selectMenu('projects')"
       >
-        my projects
+        {{ getText('content.menu.projects') }}
       </div>
     </nav>
     <div>
-      <ContentAbout v-show="selected === 'about'" />
+      <ContentAbout
+        v-show="selected === 'about'"
+        :history="getHistory"
+        :milestones-text="getMilestonesText"
+      />
       <ContentSkills v-show="selected === 'skills'" />
       <ContentProjects v-show="selected === 'projects'" />
     </div>
@@ -37,6 +41,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 import ContentAbout from '@/components/content/ContentAbout.vue'
 import ContentSkills from '@/components/content/ContentSkills.vue'
 import ContentProjects from '@/components/content/ContentProjects.vue'
@@ -55,6 +61,20 @@ export default {
       selected: 'about',
       selectedClass: 'font-bold border-2 border-yellow-400 rounded-xl',
     }
+  },
+
+  computed: {
+    getHistory() {
+      return this.getText('content.about.history')
+    },
+
+    getMilestonesText() {
+      return this.getText('content.about.milestones')
+    },
+
+    ...mapGetters({
+      getText: 'getText',
+    }),
   },
 
   methods: {

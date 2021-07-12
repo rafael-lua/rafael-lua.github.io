@@ -12,23 +12,8 @@
         shadow-md
       "
     >
-      <span> My name is Rafael de Oliveira Tragueta, I am from Brazil. </span>
-      <span>
-        I have always been interested in coding. I gave my first steps with game
-        development around five to seven years ago.
-      </span>
-      <span>
-        My first genuine programming language was Lua with the Love game
-        framework. After that, I kept jumping between engines and frameworks,
-        trying new things and languages.
-      </span>
-      <span>
-        Eventually, I got into web development when trying to make games aiming
-        for browsers. At the same time, I entered the FATEC university to study
-        Systems Development and Analysis. As I discovered more of the web
-        development world, I decided to follow this path professionally. I find
-        the full stack development flow very interesting, and I pursue being
-        capable of handling both front-end and back-end.
+      <span v-for="(text, index) in history" :key="index">
+        {{ text }}
       </span>
     </div>
     <div class="flex">
@@ -37,56 +22,33 @@
         <div class="h-div text-xl flex items-center">
           <span
             class="iconify mr-1"
-            data-icon="mdi:at"
+            data-icon="mdi:bullseye-arrow"
             data-width="24"
             data-height="24"
           />
-          <span>RELEVANT MILESTONES</span>
+          <span class="uppercase">{{ milestonesText.title }}</span>
         </div>
 
         <div class="flex flex-col gap-y-8 p-5 break-words">
-          <div>
+          <div v-for="(item, index) in milestonesText.items" :key="index">
             <div class="flex items-center gap-x-3">
               <span>&#8226;</span>
-              <span class="font-bold">TCC FATEC - Music albums database</span>
+              <span class="font-bold">{{ item.name }}</span>
             </div>
-            <div>
-              An small web project made with PHP (CodeIgniter). It was inpired
-              by things like <a href="#">IMDb</a>, but for music!
-              <!-- <span v-html="rawHtml"></span> -->
+            <div v-if="typeof item.description === 'string'">
+              <span v-html="item.description"></span>
             </div>
-          </div>
-
-          <div>
-            <div class="flex items-center gap-x-3">
-              <span>&#8226;</span>
-              <span class="font-bold">FreeCodeCamp Certificates</span>
+            <div v-else>
+              <ul>
+                <li
+                  v-for="(desc, descIndex) in item.description"
+                  :key="descIndex"
+                  class="ml-3"
+                >
+                  <span v-html="desc"></span>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li class="ml-3">1. Responsive Web Design (link)</li>
-              <li class="ml-3">
-                2. JavaScript Algorithms and Data Structures (link)
-              </li>
-              <li class="ml-3">3. Front End Libraries (link)</li>
-              <!-- <span v-html="rawHtml"></span> -->
-            </ul>
-          </div>
-
-          <div>
-            <div class="flex items-center gap-x-3">
-              <span>&#8226;</span>
-              <span class="font-bold">FullStackOpen Certificates</span>
-            </div>
-            <ul>
-              <li class="ml-3">
-                1. Parts 1 to 7 (React, Express, MondoDB...) (link)
-              </li>
-              <li class="ml-3">2. Part 8 (GraphQL, Apollo) (link)</li>
-              <li class="ml-3">
-                3. Part 11 (CI/CD with Github actions) (link)
-              </li>
-              <!-- <span v-html="rawHtml"></span> -->
-            </ul>
           </div>
         </div>
       </div>
@@ -97,6 +59,18 @@
 <script>
 export default {
   name: 'ContentAbout',
+
+  props: {
+    history: {
+      type: Array,
+      default: () => [],
+    },
+
+    milestonesText: {
+      type: Object,
+      default: () => {},
+    },
+  },
 }
 </script>
 
